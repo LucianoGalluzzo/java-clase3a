@@ -27,4 +27,8 @@ public class Password {
         }
     }
 
+    public String getValue(){
+        return password;
+    }
+
 }

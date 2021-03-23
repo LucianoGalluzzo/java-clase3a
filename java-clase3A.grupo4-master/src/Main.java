@@ -1,12 +1,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        Password password= new Password("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@!])\\S{6,12}$");
+        Password passSimple= new PasswordSimple();
+        Password passInter = new PasswordIntermedia();
+        Password passF = new PasswordFuerte();
 
-        Password password1= new Password("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@!])\\S{6,12}$");
+        passSimple.setValue("abc456");
+        passInter.setValue("abc456");
+        passF.setValue("abc456");
 
-        Password password2=new PasswordFuerte();
+        System.out.println(passSimple.getValue());
+        System.out.println(passInter.getValue());
+        System.out.println(passF.getValue());
 
-        System.out.println(password);
     }
 }
